@@ -19,7 +19,7 @@ or Gradle:
 
 ```groovy
    dependencies {
-	        compile 'com.github.ZyElite:EasyFrame:v2.2'
+	         compile 'com.github.ZyElite:EasyFrame:v1.0'
 	}
 ```
 #Example
