@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 文字 -->
+    <color name="normal_text_color">#ff6d6d6d</color>
+    <color name="text_color_selected">@color/blue_light</color>
+    <color name="blue">#ff33b5e5</color>
+    <!-- 常用颜色-->
+    <color name="white">#ffffff</color>
+    <color name="black">#ff000000</color>
+    <color name="blue_light">#25b6ed</color>
+    <color name="background_gray">#f7f7f7</color>
+    <color name="item_divider">#b2b2b2</color>
+    <drawable name="transparent">#000000</drawable>
+    <drawable name="window_background">#2ac9d4</drawable>
+
+
+    <color name="gray">#aaaaaa</color>
+    <color name="light_blue">#6593cb</color>
+
+    <color name="ml_gray">#ff9e9e9e</color>
+    <color name="ml_red">#ffff0000</color>
+
+
+    <!--下拉刷新-->
+    <color name="material_red">#ffF44336</color>
+    <color name="material_green">#ff4CAF50</color>
+    <color name="material_blue">#ff03A9F4</color>
+    <color name="material_yellow">#ffFFEB3B</color>
+
+
+</resources>

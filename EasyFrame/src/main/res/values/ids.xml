@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="checkable" type="id"/>
+    <item type="id" name="swipe"/>
+    <item name="container" type="id"/>
+
+    <item name="bg_title_bar" type="drawable"/>
+    <item name="left_arrow" type="drawable"/>
+</resources>

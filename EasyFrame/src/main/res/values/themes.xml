@@ -1,0 +1,21 @@
+<resources>
+    <!--Android2.1及以上ActionBar自定义的样式主题 -->
+    <style name="MyActionBarTheme" parent="@style/Theme.AppCompat.Light">
+        <!-- 设置ActionBar Style -->
+        <item name="actionBarStyle">@style/MyActionBar</item>
+        <item name="elevation">0dp</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <!--设置ActionBar中ActionItems的背景和点击选中时的style -->
+    </style>
+
+    <!--Android2.1及以上ActionBar样式-->
+    <style name="MyActionBar" parent="@style/Widget.AppCompat.ActionBar">
+        <!--设置ActionBar的背景-->
+        <item name="background">@color/blue</item>
+        <item name="android:actionBarSize">44dp</item>
+        <item name="android:textColorSecondary">#666666</item>
+        <!--设置ActionBar的标题的样式-->
+    </style>
+
+
+</resources>
