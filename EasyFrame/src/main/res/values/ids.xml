@@ -6,4 +6,5 @@
 
     <item name="bg_title_bar" type="drawable"/>
     <item name="left_arrow" type="drawable"/>
+    <item name="ex_header" type="id"/>
 </resources>

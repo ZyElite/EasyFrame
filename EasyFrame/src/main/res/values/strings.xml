@@ -6,14 +6,4 @@
     <string name="reload">重新尝试</string>
     <string name="no_net">网络不可用,请检查你的网络</string>
 
-
-    <!--下拉刷新-->
-    <integer-array name="material_colors">
-        <item>@color/material_red</item>
-        <item>@color/material_green</item>
-        <item>@color/material_blue</item>
-        <item>@color/material_yellow</item>
-    </integer-array>
-
-
 </resources>

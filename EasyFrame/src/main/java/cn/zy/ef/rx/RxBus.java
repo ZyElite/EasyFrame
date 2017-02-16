@@ -29,7 +29,6 @@ public class RxBus {
     private RxBus() {
     }
 
-    ;
 
     public static synchronized RxBus getInstance() {
         if (instance == null) {

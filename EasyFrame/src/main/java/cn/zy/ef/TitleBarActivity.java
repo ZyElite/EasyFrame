@@ -18,23 +18,26 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
+import cn.zy.ef.base.BaseApplication;
 import cn.zy.ef.runtimepermissions.PermissionsManager;
-import cn.zy.ef.util.ActivityManager;
 import cn.zy.ef.runtimepermissions.PermissionsResultAction;
+import cn.zy.ef.util.ActivityManager;
 
 /**
  * Created by zy on 16-9-5.
  */
 public class TitleBarActivity extends AppCompatActivity {
-
+    protected BaseApplication mApplication;
     public final ArrayList<OnBackPressedListener> mOnBackPressedListeners = new ArrayList<OnBackPressedListener>();
     public static final String ACCOUNT_REMOVED = "account_removed";
     protected TextView mLeftButton;
     protected TextView mMidButton;
     protected TextView mRightButton;
+    protected int titleViewLayoutId = 0;
+    private View actionBarCustomView;
 
     public interface OnBackPressedListener {
-        public boolean onBackPressed();
+        boolean onBackPressed();
     }
 
     public void addBackPressedListener(OnBackPressedListener onBackPressedListener) {
@@ -60,6 +63,8 @@ public class TitleBarActivity extends AppCompatActivity {
         mMidButton = (TextView) actionBarCustomView.findViewById(R.id.btn_mid);
         mRightButton = (TextView) actionBarCustomView.findViewById(R.id.btn_right);
         super.onCreate(savedInstanceState);
+
+
         ActivityManager.getInstance().addActivity(this);
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
@@ -67,7 +72,6 @@ public class TitleBarActivity extends AppCompatActivity {
             actionBar.setCustomView(actionBarCustomView);//48
             initTitle();
         }
-
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             String packageName = getPackageName();
@@ -80,20 +84,8 @@ public class TitleBarActivity extends AppCompatActivity {
             }
         }
 
-        //make sure activity will not in background if user is logged into another device or removed
-//        if (savedInstanceState != null && savedInstanceState.getBoolean(ACCOUNT_REMOVED,false)) {
-//            finish();
-//            startActivity(new Intent(this, LoginActivity.class));
-//            return;
-//        } else if (savedInstanceState != null && savedInstanceState.getBoolean("isConflict", false)) {
-//            finish();
-//            startActivity(new Intent(this, LoginActivity.class));
-//            return;
-//        }
-
         requestPermissions();
     }
-
 
     protected void initTitle() {
 
@@ -121,7 +113,6 @@ public class TitleBarActivity extends AppCompatActivity {
 
     public void setBackButton(Drawable leftArrow) {
         setBackButton(" ", leftArrow);
-//            setLeftButton(" ", v -> onBackPressed()).setCompoundDrawablesWithIntrinsicBounds(leftArrow, null, null, null);
     }
 
 
@@ -194,4 +185,5 @@ public class TitleBarActivity extends AppCompatActivity {
                                            @NonNull int[] grantResults) {
         PermissionsManager.getInstance().notifyPermissionsChange(permissions, grantResults);
     }
+
 }

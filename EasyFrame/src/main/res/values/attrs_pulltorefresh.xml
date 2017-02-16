@@ -1,6 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <declare-styleable name="PullToRefreshLayout">
-        <attr name="headerView" format="reference"/>
-        <attr name="footerView" format="reference"/>
+    <declare-styleable name="EFRefreshLayout">
+        <attr name="ef_wave_height" format="dimension"/>
+        <attr name="ef_head_height" format="dimension"/>
+        <attr name="ef_bottom_height" format="dimension"/>
+        <attr name="ef_overscroll_height" format="dimension"/>
+        <attr name="ef_enable_loadmore" format="boolean"/>
+        <attr name="ef_pureScrollMode_on" format="boolean"/>
+        <attr name="ef_show_overlay_refreshview" format="boolean"/>
+        <attr name="ef_headerView" format="dimension"/>
+        <attr name="ef_bottomView" format="dimension"/>
     </declare-styleable>
 </resources>
